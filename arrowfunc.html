@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>arrow</h1>
+  <script>
+    let res1=function(){
+      return 1
+    }
+    let res2=()=>{
+      return 1
+    }
+    console.warn(res1())
+    console.warn(res2())
+
+    let data=[1,2,3,4]
+    let newData=data.map(function(item){
+      return item*2
+    })
+    let newData1=data.map((item)=>item*2)
+
+    console.warn(newData)
+    console.warn(newData1)
+
+    // arrow fucntion not have his own this ,he takes it form parent
+    // so in react we did not need to bind it again
+
+    let obj={
+      name:"Anil",
+      getname:function(){
+        console.warn("normal",this)
+      },
+      getnamearrow:()=>{
+        console.warn("arrow",this)
+      }
+    }
+
+    obj.getname()
+    obj.getnamearrow()
+  </script>
+</body>
+</html>
