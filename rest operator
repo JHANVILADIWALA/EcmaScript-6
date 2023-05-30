@@ -1,0 +1,9 @@
+
+//2. REST OPERATOR
+//when we dont know how many param will be
+//...z
+//in form of ARRAY
+function fruits(a,...z){//a=>1 for sure 
+  console.warn("fruits",a,z);
+}
+fruits('apple','banana','kiwi','orange')
